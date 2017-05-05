@@ -8,9 +8,9 @@ driver = GraphDatabase.driver("bolt://localhost:7687", auth=basic_auth("neo4j", 
 session = driver.session()
 
 
-
-session.run("MATCH (n) DETACH DELETE n")
-
+## Uncomment to blow away any existing data
+## session.run("MATCH (n) DETACH DELETE n")
+## CARE!
 
 file = open ("world_list.txt","r")
 
